@@ -18,39 +18,34 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
       
       for (var i in sheet){
         var data = sheet[i];
-		   if (data.iconori === "left") {
-			L.circle([data.longitude, data.latitude], {
-				color: '#FFF',
-			    fill: true,
-			    fillColor: '#FFF',
-			    fillOpacity: 1,
-			    radius: 5000,	// radius of circle in metres. Don't use circleMarker, as radius is in pixels
-			    opacity: 1,
-			    weight: 0
-			})}
-		    if (data.iconori === "right") {
-			 L.circle([data.longitude, data.latitude], {
-				color: '#AAA',
-			    fill: true,
-			    fillColor: '#AAA',
-			    fillOpacity: 1,
-			    radius: 5000,	// radius of circle in metres. Don't use circleMarker, as radius is in pixels
-			    opacity: 1,
-			    weight: 0
-			})}
-			if (data.iconori === "above") {
-			 L.circle([data.longitude, data.latitude], {
-				color: '#CCC',
-			    fill: true,
-			    fillColor: '#CCC',
-			    fillOpacity: 1,
-			    radius: 5000,	// radius of circle in metres. Don't use circleMarker, as radius is in pixels
-			    opacity: 1,
-			    weight: 0
-			})}
-					   
+
+          var test = L.icon({
+              iconUrl: data.icon,
+              iconSize:     [30, 60], // size of the icon
+              iconAnchor:   [26, 60], // point of the icon which will correspond to marker's location
+              popupAnchor: [0, -60]
+          });
+          if (data.iconori === "left") {
+            test = L.icon({
+              iconUrl: data.icon,
+              iconSize:     [60, 52], 
+              iconAnchor:   [60, 26], 
+              popupAnchor: [-35, -26]
+              });
+          };
+          if (data.iconori === "right") {
+            test = L.icon({
+              iconUrl: data.icon,
+              iconSize:     [60, 52], 
+              iconAnchor:   [0, 26], 
+              popupAnchor: [35, -26]
+              })
+            };
+
+          L.marker([data.longitude, data.latitude], {icon: test})
           .addTo(map)
-          .bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
+          .bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + 
+                      data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
       }
     },
     simpleSheet: true 
