@@ -18,11 +18,9 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
       
       for (var i in sheet){
         var data = sheet[i];
-
-          L.circle([data.longitude, data.latitude], {radius: 1000}) // radius of circle in metres. Don't use circleMarker, as radius is in pixels
+		   L.circle([data.longitude, data.latitude], {radius: 1000}) // radius of circle in metres. Don't use circleMarker, as radius is in pixels
           .addTo(map)
-          .bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + 
-                      data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
+          .bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
       }
     },
     simpleSheet: true 
