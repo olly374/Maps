@@ -21,14 +21,14 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
 
           var icon = L.icon({
               iconUrl: data.icon,
-              iconSize:     [52, 60], // size of the icon
+              iconSize:     [30, 30], // size of the icon
               iconAnchor:   [26, 60], // point of the icon which will correspond to marker's location
               popupAnchor: [0, -60]
           });
           if (data.iconori === "left") {
             icon = L.icon({
               iconUrl: data.icon,
-              iconSize:     [60, 52], 
+              iconSize:     [60, 60], 
               iconAnchor:   [60, 26], 
               popupAnchor: [-35, -26]
               });
@@ -36,7 +36,7 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
           if (data.iconori === "right") {
             icon = L.icon({
               iconUrl: data.icon,
-              iconSize:     [60, 52], 
+              iconSize:     [90, 90], 
               iconAnchor:   [0, 26], 
               popupAnchor: [35, -26]
               })
