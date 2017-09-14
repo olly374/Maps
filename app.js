@@ -28,7 +28,7 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
           if (data.iconori === "left") {
             icon = L.icon({
               iconUrl: data.icon,
-              iconSize:     [60, 60], 
+              iconSize:     [200, 200], 
               iconAnchor:   [60, 26], 
               popupAnchor: [-35, -26]
               });
