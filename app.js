@@ -19,8 +19,13 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
       for (var i in sheet){
         var data = sheet[i];
 		   L.circle([data.longitude, data.latitude], {
-			   radius: 5000, 
-			   fillColor: '65ff32'
+			   color: '#FFF',
+			   fill: true,
+			   fillColor: '#FFF',
+			   fillOpacity: 1,
+			   radius: 5000,
+			   opacity: 1,
+			   weight: 0
 			}) // radius of circle in metres. Don't use circleMarker, as radius is in pixels
           .addTo(map)
           .bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
