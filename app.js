@@ -19,33 +19,16 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
       for (var i in sheet){
         var data = sheet[i];
 
-          var icon = L.icon({
-              iconUrl: data.icon,
-              iconSize:     [30, 30], // size of the icon
-              iconAnchor:   [26, 60], // point of the icon which will correspond to marker's location
-              popupAnchor: [0, -60]
-          });
-          if (data.iconori === "left") {
-            icon = L.icon({
-              iconUrl: data.icon,
-              iconSize:     [200, 200], 
-              iconAnchor:   [60, 26], 
-              popupAnchor: [-35, -26]
-              });
-          };
-          if (data.iconori === "right") {
-            icon = L.icon({
-              iconUrl: data.icon,
-              iconSize:     [90, 90], 
-              iconAnchor:   [0, 26], 
-              popupAnchor: [35, -26]
-              })
-            };
+          var circle = new L.Circle([data.longitude, data.latitude, 10, {
+            color: 'blue',
+            fillColor: '#bbf',
+            fillOpacity: 0.5
 
-          L.marker([data.longitude, data.latitude], {icon: icon})
-          .addTo(map)
-          .bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + 
-                      data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
+          //L.marker([data.longitude, data.latitude], {icon: icon})
+          //.addTo(map)
+          //.bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + 
+            //          data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
+		  markers.addLayer(circle);
       }
     },
     simpleSheet: true 
