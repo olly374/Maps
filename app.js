@@ -42,7 +42,7 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
               })
             };
 
-          L.marker([data.longitude, data.latitude], {icon: icon})
+          L.circleMarker([data.longitude, data.latitude], {icon: icon})
           .addTo(map)
           .bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + 
                       data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
