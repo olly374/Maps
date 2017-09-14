@@ -23,7 +23,7 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
 			   fill: true,
 			   fillColor: '#FFF',
 			   fillOpacity: 1,
-			   radius: 5000,
+			   radius: 25000,
 			   opacity: 1,
 			   weight: 0
 			}) // radius of circle in metres. Don't use circleMarker, as radius is in pixels
