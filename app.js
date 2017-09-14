@@ -19,7 +19,7 @@ var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
       for (var i in sheet){
         var data = sheet[i];
 
-          L.circleMarker([data.longitude, data.latitude])
+          L.circle([data.longitude, data.latitude])
           .addTo(map)
           .bindPopup("<strong style='color: #84b819'>" + data.newsroom + "</strong><br>" + 
                       data.company + " | " + data.city + "<br>Head: " + data.head).openPopup();
