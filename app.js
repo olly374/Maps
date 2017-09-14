@@ -9,7 +9,7 @@ function myFunction() {
 
 
 // add var "code"
-var code = '1ciPq3VfxUv3ucttkMPzNXNR1NLKA1JrOq1tGiLg2CsI'
+var code = '1SIU5KR29zNm52A9GtF137Y8Juire76G58Jzs75-bYfw'
 
 // loop through spreadsheet with Tabletop
     Tabletop.init({ 
